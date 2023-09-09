@@ -79,26 +79,26 @@ const countNestedItems = (obj, depth) => {
   return (
     <div className='w-full'>
       <div className='flex flex-row gap-2 justify-center text-center items-center mb-4'>
-        <span className='p-2'>URL:</span>
-      <input className='w-[80%] border border-black p-2'
+        <span className='p-2 text-sm md:text-base'>URL:</span>
+      <input className='w-[80%] border border-black p-2 text-sm md:text-base' 
         type="text"
         value={url}
         onChange={(e) => setUrl(e.target.value)}
         placeholder="Enter URL" 
         required
       />
-      <button className='bg-blue-500 w-[15%] p-2 text-white hover:bg-blue-400' onClick={fetchData}>Query</button>
+      <button className='bg-blue-500 w-[15%] p-2 text-white hover:bg-blue-400 text-sm md:text-base' onClick={fetchData}>Query</button>
       </div>
       {error && <p className='p-2' style={{ color: 'red' }}>{error}</p>}
       {data && (
         <div className='w-full grid grid-cols-2 gap-2 text-xs p-2'>
-          <div className='overflow-x-auto border-2 border-black p-2'>
-            <h2 className='text-base font-semibold mb-2'>URL Response</h2>
-            <pre className='w-[50%]'>{JSON.stringify(data, null, 2)}</pre>
+          <div className='border-2 border-black p-2'>
+            <h2 className='text-md md:text-base font-semibold mb-2'>URL Response</h2>
+            <pre className='w-full overflow-x-auto'>{JSON.stringify(data, null, 2)}</pre>
           </div>
-          <div className='overflow-x-auto border-2 border-black p-2'>
-            <h2 className='text-base font-semibold mb-2'>Processed URL Response</h2>
-            <pre className='w-[50%]'>{JSON.stringify(countedItems, null, 2)}</pre>
+          <div className='border-2 border-black p-2'>
+            <h2 className='text-md md:text-base font-semibold mb-2'>Processed URL Response</h2>
+            <pre className='w-full overflow-x-auto'>{JSON.stringify(countedItems, null, 2)}</pre>
           </div>
         </div>
       )}
