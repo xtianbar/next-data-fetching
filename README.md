@@ -10,4 +10,4 @@ ChatGPT
 
 ## Deployed on Vercel: 
 
-[`create-next-app`](https://json-fetch.vercel.app/).
+[`Live Demo`](https://json-fetch.vercel.app/).
